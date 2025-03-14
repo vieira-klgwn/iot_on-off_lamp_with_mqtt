@@ -1,5 +1,4 @@
-# iot_on-off_lamp_with_mqtt
-
+#mqtt_light_control
 
 MQTT Light Control Project
 Overview
@@ -29,7 +28,7 @@ Before running the project, ensure you have the following installed:
         Python 3.x
         paho-mqtt Python package (can be installed via pip).
 
-#Step 1: Setting Up the MQTT Broker
+Step 1: Setting Up the MQTT Broker
 
 The web interface and Python script communicate via MQTT. You'll need an MQTT broker to handle the messaging. You can use a public MQTT broker or set up your own broker.
 
@@ -40,7 +39,7 @@ Make sure the broker's WebSocket URL is configured correctly in the index.html f
 
 const broker = "ws://broker.hivemq.com:8000/mqtt"; // Example public broker
 
-#Step 2: Running the Simulated IoT Device (Python Script)
+Step 2: Running the Simulated IoT Device (Python Script)
 
     Install the required MQTT Python library by running the following command:
 
@@ -54,14 +53,14 @@ Run the Python script (light_simulation.py) on your local machine. This will sim
         💡 Light is TURNED ON when the web interface sends an "ON" command.
         💡 Light is TURNED OFF when the web interface sends an "OFF" command.
 
-#Step 3: Running the Web Interface (index.html)
+Step 3: Running the Web Interface (index.html)
 
     Open the index.html file in any modern web browser (Chrome, Firefox, etc.).
     The page will display two buttons: "Turn ON" and "Turn OFF".
     When you click the "Turn ON" or "Turn OFF" buttons, the web interface sends the corresponding MQTT message (ON or OFF) to the MQTT broker.
     The status will update on the webpage, and the Python script will print the light status to the console.
 
-#Step 4: Testing
+Step 4: Testing
 
     Click the "Turn ON" button on the web page, and the Python script will print 💡 Light is TURNED ON.
     Click the "Turn OFF" button, and the Python script will print 💡 Light is TURNED OFF.
